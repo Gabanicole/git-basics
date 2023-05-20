@@ -610,3 +610,167 @@ Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/bundle-2)
 $
 
 ```
+
+### Exercises 2
+```bash
+
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (main)
+$ git checkout main
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (main)
+$ git pull
+Already up to date.
+
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (main)
+$ git checkout -b ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/service-redesign)
+$ git add .
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/service-redesign)
+$ git commit -m "edited the service page"
+[ft/service-redesign 5e839e2] edited the service page
+ 1 file changed, 3 insertions(+)
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/service-redesign)
+$ git push origin ft/service-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 361 bytes | 180.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/Gabanicole/Gym-git-exercises/pull/new/ft/service-redesign
+remote:
+To github.com:Gabanicole/Gym-git-exercises.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (main)
+$ git add .
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (main)
+$ git stash
+Saved working directory and index state WIP on main: 6f25d56  readme redo
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (main)
+$ git stash pop
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   service.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (d761890b0a11fbb43668b64fbc355ae301b720c0)
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (main)
+$ git add --all
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (main)
+$ git commit -m "edited the service page added other list"
+[main 6882218] edited the service page added other list
+ 1 file changed, 8 insertions(+)
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 379 bytes | 189.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:Gabanicole/Gym-git-exercises.git
+   6f25d56..6882218  main -> main
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/service-redesign)
+$ git merge main
+Auto-merging service.html
+CONFLICT (content): Merge conflict in service.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/service-redesign|MERGING)    
+$  git diff
+diff --cc service.html
+index c18ff7c,4e0043d..0000000
+--- a/service.html
++++ b/service.html
+@@@ -10,6 -10,10 +10,13 @@@
+   <h1>welcome to our service page
+    <ul>
+     <li>Our services</li>
+++<<<<<<< HEAD
+++=======
++    <li>service 1</li>
++    <li>service 1</li>
++    <li>service 1</li>
++    <li>service 1</li>
+++>>>>>>> main
+    </ul>
+
+   </h1>
+.
+
+ce-redesign|MERGING)
+$ git merge
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/service-redesign|MERGING)
+$ git merge main
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/service-redesign|MERGING)
+$ git add .
+
+                                                                ce-redesign|MERGING)
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/service-redesign|MERGING)
+$ git merge main
+fatal: You have not concluded your merge (MERGE_HEAD exists).   
+Please, commit your changes before you merge.                   ce-redesign|MERGING)
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/service-redesign|MERGING)
+$ git commit -m "added an new"
+[ft/service-redesign 77abc67] added an new                      ce-redesign|MERGING)
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/service-redesign)
+$ git merge main                                                ce-redesign)
+Already up to date.
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/service-redesign)                                                    ce-redesign)
+$
+
+
+```
