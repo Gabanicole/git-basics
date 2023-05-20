@@ -774,3 +774,236 @@ $
 
 
 ```
+
+## Bundle 3
+
+### Exercise 1
+
+```bash
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (main)
+$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/team-page)
+$ git status
+On branch ft/team-page
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        team.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/team-page)
+$ git add .
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/team-page)
+$ git commit -m "create team.html"
+[ft/team-page 034bc2a] create team.html
+ 1 file changed, 12 insertions(+)
+ create mode 100644 team.html
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/team-page)
+$ git push origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 467 bytes | 233.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/Gabanicole/Gym-git-exercises/pull/new/ft/team-page      
+remote:
+To github.com:Gabanicole/Gym-git-exercises.git
+ * [new branch]      ft/team-page -> ft/team-page
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/team-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (main)
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/contact-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/team-page)
+$ git log
+commit 034bc2abdcdac7ce5535c63bc18322040e2104a2 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Nicole <89022581+Gabanicole@users.noreply.github.com>
+Date:   Sat May 20 16:34:26 2023 +0200
+
+    create team.html
+
+commit 8658448626ba29af21c2728ba8418f5d199f7bb5 (origin/main, main, ft/contact-page)    
+Author: Nicole <89022581+Gabanicole@users.noreply.github.com>
+Date:   Sat May 20 16:31:00 2023 +0200
+
+    Update readme.md
+
+commit 6882218d414ebf662bc28c48b530a4cd0a9bd1eb
+Author: Nicole <89022581+Gabanicole@users.noreply.github.com>
+Date:   Sat May 20 16:10:40 2023 +0200
+
+    edited the service page added other list
+
+commit 6f25d5620a6c7318ba927fbd03f029e7971103ac
+Author: Nicole <89022581+Gabanicole@users.noreply.github.com>
+Date:   Sat May 20 15:31:59 2023 +0200
+
+     readme redo
+
+commit be257ff245766b64729b0d97bb7f54f1762ff5fe
+Merge: c92dc80 b0c2e78
+Author: Nicole <89022581+Gabanicole@users.noreply.github.com>
+Date:   Sat May 20 10:14:26 2023 +0200
+
+    Merge pull request #1 from Gabanicole/ft/bundle-2
+
+    add  service page
+
+commit c92dc809844e542c0eafac61f0557825ca009ef5
+Merge: ebe9641 b594093
+Author: Nicole <89022581+Gabanicole@users.noreply.github.com>
+Date:   Sat May 20 10:13:20 2023 +0200
+
+    Merge pull request #2 from Gabanicole/dev
+
+    Dev
+
+commit b5940937f081d2a5429e5cf466622c9bc7bb8cd1
+Merge: 95fb750 ebe9641
+Author: Nicole <89022581+Gabanicole@users.noreply.github.com>
+Date:   Sat May 20 10:12:55 2023 +0200
+
+    Merge branch 'main' into dev
+
+commit ebe96418cf2cb88c1716010405a98490ec8142b1
+Author: Nicole <89022581+Gabanicole@users.noreply.github.com>
+Date:   Sat May 20 00:04:49 2023 +0200
+
+     done with exercises1 bundle 2
+
+commit b0c2e78d015a31c58fbe934fbf9a9176e2ea3996
+Author: Nicole <89022581+Gabanicole@users.noreply.github.com>
+Date:   Fri May 19 23:49:36 2023 +0200
+
+    create service page
+
+commit ea77e85f66197a0a1421a285531bbe3bba2c2f5b
+Author: Nicole <89022581+Gabanicole@users.noreply.github.com>
+Date:   Fri May 19 22:55:31 2023 +0200
+
+     done with exercise 2
+
+commit 0926072a6924fb21f006f7a8ab2ee5c7b929d805
+Author: Nicole <89022581+Gabanicole@users.noreply.github.com>
+Date:   Fri May 19 22:50:41 2023 +0200
+
+    done with exercises two
+
+commit 95fb750576e59a8957850d96166824fafb900e98
+Author: Nicole <89022581+Gabanicole@users.noreply.github.com>
+Date:   Fri May 19 22:44:24 2023 +0200
+
+    done with home and about
+
+commit eaafae86605dfc1e8aad7a720d738f9198630609
+Author: Nicole <89022581+Gabanicole@users.noreply.github.com>
+Date:   Fri May 19 22:07:20 2023 +0200
+
+    done with the readme me copying
+
+commit fbefc47dd25d2897ebc73eb4e110974bb3d2774b
+Author: Nicole <89022581+Gabanicole@users.noreply.github.com>
+Date:   Fri May 19 22:05:00 2023 +0200
+
+    the message after done
+
+commit 4024ecc6ba437de2888d25c21a470600fa2ea7df
+Author: Nicole <89022581+Gabanicole@users.noreply.github.com>
+Date:   Fri May 19 22:00:22 2023 +0200
+
+     done with exercise 1
+
+commit 2862e9a8da93eafac6d9db34634afae7bf4700b1
+Author: Nicole <89022581+Gabanicole@users.noreply.github.com>
+Date:   Fri May 19 21:52:21 2023 +0200
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/contapage)ct-page)
+$ git cherry-pick commit 034bc2abdcdac7ce5535c63bc18322040e2104a2
+fatal: bad revision 'commit'                                    ct-page)
+                                                                2
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/contact-page)
+$ git cherry-pick  034bc2abdcdac7ce5535c63bc18322040e2104a2     ct-page)
+[ft/contact-page f0cb672] create team.html
+ Date: Sat May 20 16:34:26 2023 +0200
+ 1 file changed, 12 insertions(+)
+ create mode 100644 team.html
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/contact-page)                                                        ct-page)
+$ it add .
+bash: it: command not found
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/contact-page)
+$ git add .
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/contact-page)
+$ git push origin ft/contact-page
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/Gabanicole/Gym-git-exercises/pull/new/ft/contact-page   
+remote:
+To github.com:Gabanicole/Gym-git-exercises.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/contact-page)
+$ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/faq-page)
+$ git add .
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/faq-page)
+$ git status
+On branch ft/faq-page   
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   faq.html
+
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/faq-page)
+$ git commit -m"created a faq page"
+[ft/faq-page 0e51663] created a faq page
+ 1 file changed, 14 insertions(+)
+ create mode 100644 faq.html
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/faq-page)
+$ git push origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 478 bytes | 159.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/Gabanicole/Gym-git-exercises/pull/new/ft/faq-page       
+remote:
+To github.com:Gabanicole/Gym-git-exercises.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+
+Nicole@DESKTOP-I5FEMIP MINGW64 ~/desktop/git-exercises (ft/faq-page)
+$
+
+```
